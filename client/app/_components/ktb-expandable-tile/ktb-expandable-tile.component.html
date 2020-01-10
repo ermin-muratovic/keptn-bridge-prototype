@@ -1,0 +1,19 @@
+<div class="ktb-expandable-tile-container">
+  <div class="ktb-expandable-tile-header" [dtExpandablePanel]="panel">
+    <ng-content
+      select="
+    ktb-expandable-tile-header,
+    [ktb-expandable-tile-header],
+    [ktbTileHeader]"></ng-content>
+    <dt-show-more [showLess]="panel.expanded">
+      <dt-show-less-label></dt-show-less-label>
+    </dt-show-more>
+  </div>
+  <div class="ktb-expandable-tile-content">
+    <dt-expandable-panel #panel>
+      <div class="container dark">
+        <ng-content></ng-content>
+      </div>
+    </dt-expandable-panel>
+  </div>
+</div>
